@@ -1,9 +1,10 @@
-/*create cv-style1 raoul, on both desktop and phone*/
+/*general stylings*/
 body {
     margin: 0px;
 }
 
-@media all and (max-width:425px){
+/*phone styling*/
+@media all and (max-width:874px){
      header {
         background-color: #999999;
         display: flex;
@@ -25,8 +26,424 @@ body {
         margin-top: 70px;
     }
 
-    #about {
-        width: 97%;
+    #about,
+    #competencies,
+    #experiences,
+    #education,
+    #hobbies,
+    #contact {
+        width: 94%;
         margin-left: 4%;
+        margin-top: 30px;
+    }
+
+    #about p {
+        margin-top: 30px;
+    }
+    h3{
+        margin-left: 7%;
+    }
+
+    h3::before {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 2px;
+        width: 94%;
+        background-color: lightgray;
+        margin-top: 30px;
+        margin-left: -6%;
+    }
+
+    h3::after {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 20px;
+        width: 20px;
+        background-color: red;
+        border-radius: 50%;
+        margin-top: -25px;
+        margin-left: -25px;
+    }
+
+    h4 {
+        margin: 0px;
+        margin-top: 30px;
+    }
+    .skills-primary,
+    .skills-secondary {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 122px;
+    }
+
+    .skills-primary{
+        margin-top: 35px;
+    }
+
+    .skills-secondary {
+        margin-top: 20px;
+    }
+    .skills-primary::after{
+        display: block;
+        content: 'Main';
+        position: absolute;
+        margin-top: -20px;
+    }
+
+    .skills-secondary::after{
+        display: block;
+        content: 'Other';
+        position: absolute;
+        margin-top: -20px;
+    }
+    .skills-primary .skill {
+        height: 38px;
+        display: flex;
+        align-items: center;
+        background-color: lightgray;
+    }
+
+    .skills-secondary .skill {
+        height: 38px;
+        display: flex;
+        align-items: center;
+        background-color: lightgray;
+        opacity: 0.7;
+    }
+
+    .skill span {
+        height: 28px;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        color: white;
+        z-index: 1;
+        width: 97%;
+        margin-left: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .skill span::after{
+        position: absolute;
+        content: '';
+        height: 30px;
+        background-color: red;
+        z-index: -1;
+        margin-left: -7px;
+    }
+
+    [data-skill="5"] span::after {
+        width: 50%;
+    }
+
+    [data-skill="3"] span::after {
+        width: 32%;
+    }
+
+    [data-skill="1"] span::after {
+        width: 11%;
+    }
+
+    [data-skill="9"] span::after {
+        width: 93%;
+    }
+
+    [data-skill="7"] span::after {
+        width: 73%;
+    }
+
+    .experience-type,
+    .experience-institution,
+    .experience-date-separator {
+        color: red;
+    }
+
+    .experience-details {
+        color: #999999;
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts dl {
+        margin: 0px;
+    }
+
+    dl {
+        display: grid;
+        grid-template-columns: 120px 65%;
+        height: 22px;
+    }
+
+    dt {
+        background-color: red;
+        color: white;
+        padding: 5px;
+    }
+
+    dd {
+        margin-left: 8px;
+        padding: 5px;
+        margin-left: -1px;
+    }
+
+    dd a{
+        text-decoration: none;
+        color: red;
+    }
+}
+
+@media all and (min-width:472px) {
+    header {
+        height: 180px;
+        align-items: center;
+    }
+    header div {
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+        height: 150px;
+    }
+
+    header hgroup {
+        width: 250px;
+    }
+}
+
+@media all and (min-width:874px) {
+
+
+    header {
+        width: 100%;
+        height: 180px;
+        display: flex;
+        flex-direction: row;
+        background-color: #999999;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header div hgroup{
+        color: red;
+    }
+
+    header figure {
+        margin-left: 0px;
+    }
+    .content {
+        font-size: 20px;
+        width: 85%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 450px 300px;
+        grid-row-gap: 80px;
+        margin-top: 70px;
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 22px;
+    }
+
+    .contacts dl {
+        margin: 0px;
+    }
+
+    #contact {
+        position: relative;
+        width: 100%;
+        margin-top: -1160px;
+    }
+    .contacts {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 18px;
+    }
+
+    dl {
+        display: grid;
+        grid-template-columns: 150px 70%;
+        height: 27px;
+    }
+
+    dt {
+        background-color: red;
+        color: white;
+        padding: 5px;
+    }
+
+    dd {
+        margin-left: 8px;
+        padding: 5px;
+        margin-left: -1px;
+        background-color: black;
+    }
+
+    dd a{
+        text-decoration: none;
+        color: red;
+    }
+
+    h3{
+        margin-left: 7%;
+    }
+
+    h3::before {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 2px;
+        width: 43%;
+        background-color: lightgray;
+        margin-top: 30px;
+        margin-left: -3%;
+    }
+
+    h3::after {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 20px;
+        width: 20px;
+        background-color: red;
+        border-radius: 50%;
+        margin-top: -25px;
+        margin-left: -25px;
+    }
+
+    h4 {
+        margin: 0px;
+        margin-top: 30px;
+    }
+
+    #contact h3 {
+        display: none;
+    }
+    .skills-primary,
+    .skills-secondary {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 122px;
+    }
+
+    .skills-primary{
+        margin-top: 35px;
+    }
+
+    .skills-secondary {
+        margin-top: 20px;
+    }
+    .skills-primary::after{
+        display: block;
+        content: 'Main';
+        position: absolute;
+        margin-top: -20px;
+    }
+
+    .skills-secondary::after{
+        display: block;
+        content: 'Other';
+        position: absolute;
+        margin-top: -20px;
+    }
+    .skills-primary .skill {
+        height: 38px;
+        display: flex;
+        align-items: center;
+        background-color: lightgray;
+    }
+
+    .skills-secondary .skill {
+        height: 38px;
+        display: flex;
+        align-items: center;
+        background-color: lightgray;
+        opacity: 0.7;
+    }
+
+    .skill span {
+        height: 28px;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        color: white;
+        z-index: 1;
+        width: 97%;
+        margin-left: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .skill span::after{
+        position: absolute;
+        content: '';
+        height: 30px;
+        background-color: red;
+        z-index: -1;
+        margin-left: -7px;
+    }
+
+    [data-skill="5"] span::after {
+        width: 50%;
+    }
+
+    [data-skill="3"] span::after {
+        width: 32%;
+    }
+
+    [data-skill="1"] span::after {
+        width: 11%;
+    }
+
+    [data-skill="9"] span::after {
+        width: 93%;
+    }
+
+    [data-skill="7"] span::after {
+        width: 73%;
+    }
+
+    .experience-type,
+    .experience-institution,
+    .experience-date-separator {
+        color: red;
+    }
+
+    .experience-details {
+        color: #999999;
+    }
+
+    #experiences,
+    #about,
+    #hobbies {
+        width: 95%;
+    }
+
+    #hobbies {
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin-top: 35px;
+    }
+}
+
+@media all and (min-width:1150px) {
+    header figure {
+        margin-left: 50px;
     }
 }
