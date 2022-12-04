@@ -22,6 +22,10 @@ body {
         margin-left: 10px;
     }
 
+    header img {
+        width: 130px;
+    }
+
     .content {
         margin-top: 70px;
     }
@@ -236,6 +240,10 @@ body {
 
     header figure {
         margin-left: 0px;
+    }
+
+    header img {
+        width: 120px;
     }
     .content {
         font-size: 20px;
