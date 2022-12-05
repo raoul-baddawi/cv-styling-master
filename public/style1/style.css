@@ -3,6 +3,14 @@ body {
     margin: 0px;
 }
 
+hgroup h2 {
+    color: white;
+}
+
+header img {
+    width: 130px;
+    border: 5px solid red;
+}
 /*phone styling*/
 @media all and (max-width:874px){
      header {
@@ -24,6 +32,8 @@ body {
 
     header img {
         width: 130px;
+        border-radius: 50%;
+        border: 5px solid red;
     }
 
     .content {
@@ -219,6 +229,7 @@ body {
     header hgroup {
         width: 250px;
     }
+
 }
 
 @media all and (min-width:874px) {
@@ -271,6 +282,7 @@ body {
         position: relative;
         width: 100%;
         margin-top: -1160px;
+        margin-left: 25px;
     }
     .contacts {
         width: 100%;
